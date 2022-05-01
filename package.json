@@ -1,0 +1,15 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "My Personal Portfolio",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o css/ --recursive",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "node-sass": "^7.0.1",
+    "sass": "^1.32.8"
+  },
+  "author": "",
+  "license": "ISC"
+}

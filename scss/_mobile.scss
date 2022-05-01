@@ -1,0 +1,193 @@
+//Wide screen
+@include mediaXl {
+  .site {
+    width: 50%;
+  }
+
+  .close {
+    display: block;
+  }
+  #closeBtn {
+    display: none;
+  }
+}
+
+//Desktop and laptops
+@include mediaLg {
+  .about-info {
+    grid-template-areas:
+      "bioimage"
+      "bio";
+
+    grid-template-columns: 1fr;
+  }
+
+  .expertise-container {
+    grid-template-columns: 1fr;
+    .skills {
+      text-align: left;
+      .progress {
+        width: 100%;
+      }
+    }
+  }
+
+  .education {
+    grid-template-areas:
+      "clg hsc"
+      "ssc ems";
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .site {
+    width: 50%;
+  }
+
+  .close {
+    display: block;
+  }
+  #closeBtn {
+    display: none;
+  }
+}
+
+//Tablets and Small laptops
+@include mediaMd {
+  main {
+    align-items: center;
+    text-align: center;
+  }
+
+  main#about {
+    padding: 15px;
+  }
+
+  .menu-nav,
+  .menu-branding {
+    float: none;
+    width: 100%;
+    min-height: 0;
+
+    &.show {
+      transform: translate(0, 0);
+    }
+  }
+
+  .menu-nav {
+    height: 70vh;
+    transform: translate(100%, 0);
+    .nav-link {
+      font-size: 24px;
+    }
+  }
+  .menu-branding {
+    height: 30vh;
+    transform: translate(-100%, 0);
+    .portrait {
+      width: 150px;
+      height: 150px;
+    }
+  }
+
+  .about-info {
+    grid-template-areas:
+      "bioimage"
+      "bio";
+
+    grid-template-columns: 1fr;
+  }
+
+  .expertise-container {
+    grid-template-columns: 1fr;
+    .skills {
+      text-align: left;
+      .progress {
+        width: 100%;
+      }
+    }
+  }
+
+  .education {
+    grid-template-areas:
+      "clg"
+      "hsc"
+      "ssc"
+      "ems";
+    grid-template-columns: 1fr;
+  }
+
+  #main-footer {
+    bottom: -1%;
+  }
+  @for $x from 1 through 4 {
+    &.w3-animate-bottom:nth-child(#{$x}) {
+      animation: animatebottom $x * 0.5s;
+    }
+  }
+  .projects {
+    flex-direction: column;
+    .items {
+      width: calc(75vw);
+      align-self: center;
+    }
+  }
+
+  .modal-box {
+    width: 60%;
+    height: 90%;
+  }
+  .close {
+    display: block;
+  }
+  #closeBtn {
+    display: none;
+  }
+}
+
+//Smartphones
+@include mediaSm {
+  main#home {
+    margin-top: 0vh;
+    &h1 {
+      font-size: 4rem;
+    }
+  }
+  main#about {
+    padding: 15px;
+  }
+
+  .text-details {
+    text-align: left;
+  }
+  .education {
+    grid-template-areas:
+      "clg"
+      "hsc"
+      "ssc"
+      "ems";
+    grid-template-columns: 1fr;
+  }
+
+  #main-footer {
+    bottom: -1%;
+  }
+
+  .site {
+    width: 100%;
+  }
+
+  .modal-box {
+    border-radius: 0;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    margin: 0;
+    .close {
+      display: none;
+    }
+    #closeBtn {
+      display: block;
+    }
+  }
+}
