@@ -22,7 +22,7 @@ var description = [
     description:
       "Demo FLight Search App with static Data",
 
-    tools: "Angular, HTML5, CSS and Typescript"
+    tools: "Angular8, HTML5, CSS and Typescript"
   }
 ];
 
