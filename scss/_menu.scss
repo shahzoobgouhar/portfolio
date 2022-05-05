@@ -5,9 +5,14 @@
   z-index: 3;
   right: 35px;
   top: 35px;
+
+  @include mediaSm {
+    right: 16px;
+    top: 16px;
+  }
+
   cursor: pointer;
   @include easeOut;
-
   .btn-line {
     width: 28px;
     height: 3px;
@@ -23,9 +28,11 @@
       &:nth-child(1) {
         transform: rotate(45deg) translate(5px, 5px);
       }
+
       &:nth-child(2) {
         display: none;
       }
+
       &:nth-child(3) {
         transform: rotate(-45deg) translate(1px, -1px);
       }
@@ -63,9 +70,11 @@
     background: $primary-color;
     transform: translate(0, 100%);
     @include easeOut;
+
     &.show {
       transform: translate(0, 0);
     }
+
     .portrait {
       width: 250px;
       height: 250px;
@@ -83,6 +92,7 @@
     list-style: none;
     transform: translate(0, -100%);
     @include easeOut;
+
     &.show {
       transform: translate(0, 0);
     }
@@ -96,7 +106,7 @@
       transform: translate(0, 0);
     }
 
-    &.current > a {
+    &.current>a {
       color: $secondary-color;
     }
   }
@@ -112,6 +122,7 @@
     text-decoration: none;
     text-align: center;
     @include easeOut;
+
     &:hover {
       color: $secondary-color;
     }
